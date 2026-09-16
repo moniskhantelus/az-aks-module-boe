@@ -1,0 +1,17 @@
+{
+  "kaas_iac": {
+    "terraform_base_image": "registry.web.boeing.com/amp/docker-images/terraform/terraform-azure/ubi8minimal-azterraform/v1.9.2",
+    "terraform_base_image_version": "1.0.1",
+    "terraform_debug_enable": "N",
+    "terraform_variablefile_enable": "N",
+    "terraform_destroy_enable": "Y"
+  },
+  "laas_notification": {
+    "enable_notify": "Y",
+    "to_recipient": ["mohammadmonis.khan@boeing.com"],
+    "comment": "AKS Module full code"
+  },
+  "kaas_iac_test": {
+    "enable_terra_test": "Y"
+  }
+}
