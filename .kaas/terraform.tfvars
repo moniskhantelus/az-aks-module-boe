@@ -110,7 +110,7 @@ platform_security = {
 }
 system_node_pool = {
   architecture            = "amd64"
-  vm_size                 = "Standard_D4pds_v6"
+  vm_size                 = "Standard_D2ads_v5"
   min_count               = 1
   max_count               = 3
   node_count              = 1
