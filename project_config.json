@@ -4,7 +4,7 @@
         "terraform_base_image_version": "26.04.15",
         "terraform_debug_enable": "N",
         "terraform_variablefile_enable": "N",
-        "terraform_destroy_enable": "N"
+        "terraform_destroy_enable": "Y"
     },
 
   "laas_notification": {
