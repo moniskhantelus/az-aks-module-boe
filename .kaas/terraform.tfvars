@@ -9,7 +9,7 @@ tenant_id       = "bcf48bba-4d6f-4dee-a0d2-7df59cc36629"
 # ==============================================================================
 naming = {
   platform     = "kaas"
-  maintain_org = "cdp"
+  maintain_org = "str91"
   environment  = "dev"
   region_code  = "va"
 }
