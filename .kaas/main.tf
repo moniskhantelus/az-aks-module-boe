@@ -1,5 +1,5 @@
 module "aks" {
-  source = "/../.."
+  source = "../"
 
   naming                       = var.naming
   resource_group               = var.resource_group
