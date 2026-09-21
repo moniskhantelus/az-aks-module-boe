@@ -1,7 +1,7 @@
 # Boeing AKS — What We Built & How It Works
 
 **STR-126 · STR-127 · STR-128 · STR-133 · STR-134**  
-Private-only AKS module · Release `26.09.1`
+Private-only AKS module
 
 **Walkthrough:** Secure the cluster → define its topology → expose its configuration → package it for reuse → connect platform consumers.
 
@@ -9,7 +9,7 @@ Private-only AKS module · Release `26.09.1`
 
 | What is done | How it’s done |
 |---|---|
-| **Made every cluster private.** There is no public/private switch. | AKS sets `private_cluster_enabled=true` and disables the public FQDN. API-server VNet integration attaches the control plane to the supplied API subnet. |
+| **Made every cluster private.** There is a public/private switch. | AKS sets `private_cluster_enabled=true` and disables the public FQDN. API-server VNet integration attaches the control plane to the supplied API subnet. |
 | **Removed public node IPs and controlled outbound routing.** | System and user pools set `node_public_ip_enabled=false`. Azure CNI Overlay/Cilium uses `userDefinedRouting` through the existing network. |
 | **Separated cluster management from image-pull identity.** | Distinct user-assigned control-plane and kubelet identities are created or reused. Reuse checks the supplied IDs and subscription; AKS receives the explicit kubelet resource, client and principal IDs. |
 | **Assigned permissions to the identity that needs them.** | Optional Terraform role assignments grant network, identity-operator, private-DNS and KMS permissions to the control plane. The kubelet receives `AcrPull` or `Container Registry Repository Reader`, matching registry authorization mode. |
